@@ -1,0 +1,155 @@
+﻿@model seocake.Models.PostSet
+
+@{
+    ViewBag.Title = "Posts";
+}
+
+@Html.Partial("Header")
+
+
+<div class="wrap">
+
+    
+</div>
+<div class="display-field">
+    
+
+    <div id="center">
+        <section><h1>@Html.DisplayNameFor(model => model.PostName)</h1></section> <!-- Заголовок раздела -->
+        <aside class="old-as">
+            <div class="other-statyi">
+                <h2>Подобные статьи</h2>
+                <div class="item">
+                    <p><a href="#">Конференция WWW.ua</a></p>
+                    <span class="info left">1 сен 2013, 11:24</span>
+                </div>
+                <div class="item">
+                    <p><a href="#">Конференция WWW.ua</a></p>
+                    <span class="info left">1 сен 2013, 11:24</span>
+                </div>
+                <div class="item">
+                    <p><a href="#">Конференция WWW.ua</a></p>
+                    <span class="info left">1 сен 2013, 11:24</span>
+                </div>
+                <div class="item">
+                    <p><a href="#">Конференция WWW.ua</a></p>
+                    <span class="info left">1 сен 2013, 11:24</span>
+                </div>
+                <div class="item">
+                    <p><a href="#">Конференция WWW.ua</a></p>
+                    <span class="info left">1 сен 2013, 11:24</span>
+                </div>
+                <div class="item">
+                    <p><a href="#">Конференция WWW.ua</a></p>
+                    <span class="info left">1 сен 2013, 11:24</span>
+                </div>
+            </div>
+            <div class="banner">
+                <a href="#"><img src="@Url.Content("~/Content/img/banner-side.png")" />></a>
+            </div>
+            <div class="banner">
+                <a href="#"><img src="@Url.Content("~/Content/img/soft-banner.png")" />></a>
+            </div>
+
+            <div class="banner vk-widget">
+                <img src="@Url.Content("~/Content/img/vk-widget.png")" />
+                >
+            </div>
+        </aside>
+        <article class="statyi inner content old">
+            <!-- Страница NEWS, вложенная, текстовая -->
+            <span class="cat">Категория: <a href="#">Название категории статей</a></span>
+            <div class="clear"></div>
+            <img src="@Url.Content("~/Content/img/news5.png")" class="intro left" />
+           @Html.DisplayFor(model => model.Post) 
+            <div class="artic-footer">
+                <span class="info left"><a href="#">Сергей Бринн</a>, 1 сен 2013, 11:24</span>
+                <span class="viewed left">(3456)</span>
+                <span class="favorite left">(25)</span>
+                <div class="social">
+                    <a href="#" class="vk">vk</a>
+                    <a href="#" class="tw">tw</a>
+                    <a href="#" class="fb">fb</a>
+                    <a href="#" class="gp">gp</a>
+                    <a href="#" class="ok">ok</a>
+                </div>
+                <div class="rate right">
+                    <span class="plus">25</span>
+                    <span class="minus">14</span>
+                </div>
+            </div>
+            <div class="tags">
+                <p>Теги:</p>
+                <div>
+                    <a href="#">SEO-специалисты</a>
+                    <a href="#">Интернет</a>
+                    <a href="#">Веб</a>
+                    <a href="#">Разработчики</a>
+                    <a href="#">Интернет</a>
+                    <a href="#">SEO</a>
+                    <a href="#">Веб</a>
+                </div>
+            </div>
+            <div id="comments-old">
+                <h2>Комментарии (12)</h2>
+                <div class="comment">
+                    <h4><a href="#">Иван Петров</a></h4>
+                    <span class="time">Сегодня, 12:30</span>
+                    <p>В период зарождения поисковых машин, технология обмена ссылками считалась одним из способов привлечения посетителей на сайт. SEO-специалисты занимались тем, что добавляли сайты в поисковики, со временем количество обменных ссылок стало.</p>
+                    <a href="#" class="answer">Ответить</a>
+                    <div class="rate right">
+                        <span class="plus">25</span>
+                        <span class="minus">14</span>
+                    </div>
+                    <div class="comment">
+                        <h4><a href="#">Иван Петров</a></h4>
+                        <span class="time">Сегодня, 12:30</span>
+                        <p>В период зарождения поисковых машин, технология обмена ссылками считалась одним из способов привлечения посетителей на сайт. SEO-специалисты занимались тем, что добавляли сайты в поисковики, со временем количество обменных ссылок стало.</p>
+                        <a href="#" class="answer">Ответить</a>
+                        <div class="rate right">
+                            <span class="plus">25</span>
+                            <span class="minus">14</span>
+                        </div>
+                        <div class="comment">
+                            <h4><a href="#">Иван Петров</a></h4>
+                            <span class="time">Сегодня, 12:30</span>
+                            <p>В период зарождения поисковых машин, технология обмена ссылками считалась одним из способов привлечения посетителей на сайт. SEO-специалисты занимались тем, что добавляли сайты в поисковики, со временем количество обменных ссылок стало.</p>
+                            <a href="#" class="answer">Ответить</a>
+                            <div class="rate right">
+                                <span class="plus">25</span>
+                                <span class="minus">14</span>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="comment">
+                    <h4><a href="#">Иван Петров</a></h4>
+                    <span class="time">Сегодня, 12:30</span>
+                    <p>В период зарождения поисковых машин, технология обмена ссылками считалась одним из способов привлечения посетителей на сайт. SEO-специалисты занимались тем, что добавляли сайты в поисковики, со временем количество обменных ссылок стало.</p>
+                    <a href="#" class="answer">Ответить</a>
+                    <div class="rate right">
+                        <span class="plus">25</span>
+                        <span class="minus">14</span>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="leavecomment">
+                    <h2>Оставить комментарий</h2>
+                    <p>Ваше имя</p><input type="name" name="name">
+                    <p>E-mail</p><input type="email" name="email">
+                    <p>Комментарий</p><textarea name="comment"></textarea>
+                    <input type="submit" class="send button red" value="Отправить">
+                </div>
+            </div>
+        </article>
+        <div class="clear"></div>
+    </div>
+
+
+</div>
+
+
+@Html.Partial("Footer")

@@ -1,0 +1,521 @@
+@charset "utf-8";
+/*-------------------   страницы FAQ   ---------------------------------*/
+
+article.faq .faq-item { /* блок с вопросом */
+	display:table-cell;    /* для выравнивания по высоте */
+	vertical-align:middle; /* для выравнивания по высоте */
+	height:77px; 
+	color:#222;
+	text-decoration:none;
+	background:#f8fafa url(../img/faq-q.png) no-repeat 19px 19px; 
+	padding:0px 78px;
+	margin:0 0 5px 0;
+	border:1px solid #f8fafa;
+	border-radius:4px; 
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	font-weight:bold;
+	width:900px;
+	}
+article.faq .faq-item.even /*:nth-child(even)*/ {background:#edf2f3 url(../img/faq-q.png) no-repeat 19px 19px !important; border:1px solid #edf2f3;}  /* все четные ссылки */ 
+article.faq .faq-item:hover {border:1px solid #6ea8b4;}  /* при наведении */ 
+article.faq p.faq-item:hover {border:1px solid #edf2f3 !important;}  /* при наведении на странице faq2 */ 
+
+article.faq .answer {  /* блок с ответом  */
+	background:#edf2f3; 
+	color:#333; 
+	padding:20px;
+	margin:5px 0 0 0;	
+	border-radius:4px; 
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;}
+article.faq .answer p {margin:0 0 20px 0;}
+article.faq .other-faq {}  /*  другие вопросы  */
+article.faq .other-faq  h2{background:url(../img/faq-q-h2.png) no-repeat 0px 6px; text-indent:30px;}
+article.faq a.faq-other-item {
+	display:table-cell;    /* для выравнивания по высоте говорим браузеру что это элемент таблицы, хотя это не так */
+
+	vertical-align:middle; /* для выравнивания по высоте */
+	text-decoration:none;
+	height:45px;
+	padding:0 38px;
+	margin:0;
+	background:url(../img/faq-q-3.png) no-repeat 0px center; 
+	font-weight:bold;
+	}
+article.faq a.faq-other-item:hover {color:#cb4736; background:url(../img/faq-q-3h-2.png) no-repeat 0px center;}  /* при наведении */ 
+article.faq .other-faq h2 {margin: 33px 0 10px 0;}
+article.faq hr {height:0px; border:0px !important;} /* hr нужен чтобы ссылки не слиплись, так как браузер будет думать что это таблица (для выравнивания текста по высоте) */
+
+
+
+/*------------------- конец страниц FAQ   ---------------------------------*/
+
+/*----------------------   страницы news ---------------------------------*/
+
+
+article.news .partner-news, article.news .rezident-news, article.news .internet-news {
+	float:left; 
+	width:32%;
+	margin:34px 2% 0 0;
+	}
+article.news .internet-news {margin:34px 0 0 0;}
+article h2 {text-indent:29px; border-bottom:none;}
+article.news .partner-news h2{background:url(../img/partner-news.png) no-repeat 0px 7px;}
+article.news .rezident-news  h2{background:url(../img/rezident-news.png) no-repeat 0px 7px;}
+article.news .internet-news  h2{background:url(../img/internet-news.png) no-repeat 0px 7px;}
+article.news .item {
+	background:#edf2f3; 
+	width:100%;
+	min-height:133px;
+	margin:0 0 5px 0;
+	overflow:hidden;
+	clear:both;
+	border-radius:4px; 
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	}
+article.news .item:nth-child(even) {background:#f8fafa;}
+article.news .item img {float:left; width:20%; margin:20px 5%;}
+article.news .item > div {float:right; width:70%;}
+article.news .item h4 {margin:15px 0 9px 0;}
+article.news .item h4 a {text-decoration:none;}
+article.news .item p a {text-decoration:none; color:#333; position:relative;}
+article.news .item p a:after {
+	content: '';
+	width: 4px;
+	height: 7px;
+	background:url(../img/news-after-link.png) no-repeat center center;
+	position:absolute;
+	bottom:5px;
+	margin:0 0 0 6px;
+	}
+article.news .button {width:151px;}
+
+section h1 {position:relative}
+section h1 .rss {
+	position:absolute; 
+	right:0; 
+	top:0; 
+	background:url(../img/rss.png) no-repeat center center; 
+	text-indent:-9999px;
+	display:block;
+	width:62px;
+	height:57px;
+	}
+.orderby-bar {color:#333; font-size:11px; line-height:38px; overflow:hidden; border-bottom:1px solid #e9e9e9; margin:0 0 25px 0;}
+.orderby-bar .favorite {float:left; background:url(../img/favorite.png) no-repeat left center; text-indent:21px; color:#333; text-decoration:none;}
+.orderby-bar .new {float:left; background:url(../img/new-bar.png) no-repeat left center; text-indent:21px; color:#333; text-decoration:none;}
+.orderby-bar .viewed {float:left; background:url(../img/viewed-bar.png) no-repeat left center; text-indent:21px; margin:0 20px; color:#333; text-decoration:none;}
+.orderby-bar .orderby {float:right}
+.orderby-bar .orderby a {color:#888; text-decoration:none; border-bottom:1px dashed #888; margin:0 0 0 12px;}
+.orderby-bar .orderby-date {float:right; margin:0 0 0 25px;}
+.orderby-bar .orderby-date span {padding:0 10px 0 0;}
+.orderby-bar .orderby-date .select {
+	width:100px;
+	height:28px;
+	line-height:28px;
+	background:#fff;
+	border:1px solid #c6c6c6; 
+	border-radius:2px; 
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	display:inline-block;
+	margin:0;
+	}
+.orderby-bar .find {margin:0 0 0 20px;}
+/* ---------------------------   вложенные страницы news, statyi, video    -----------------------------------------*/
+
+
+article.news.inner .item, article.statyi.inner .item {
+	background:none !important; 
+	border-radius:0px; 
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	overflow: hidden;
+	}
+article.video .item {
+	background: #dbe9ec !important; 
+	overflow: hidden; 
+	padding:0 20px;
+	border-radius:5px; 
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	margin:5px 0 0;
+	border:1px solid #dbe9ec;
+}
+article.video .item:hover {border: 1px #6ea8b4 solid !important;}
+article.video .item h4 a {color:#222 !important; text-decoration: none;}
+article.video .item h4 a:hover {color:#6ea8b4 !important; text-decoration: none;}
+article.video .item.new {background: #edf2f3 !important; border:1px solid #edf2f3;}
+article.video .item a.preview {display:block; text-align:center;}
+article.video .item.favorite {background: #dbe9ec url(../img/favorite.png) no-repeat right 20px top 20px !important;}
+article.video .item.new.favorite {background: #edf2f3 url(../img/favorite.png) no-repeat right 20px top 20px !important;}
+article.news.inner .item.news-video {background: url(../img/news-video.png) no-repeat right 20px !important;}
+article.news.inner .item.news-calendar {background: url(../img/news-calendar.png) no-repeat right 20px !important;}
+/*article*/.news.inner .item img, .statyi.inner .item img, .video .item a.preview {float:left; width:17%; margin:20px 3% 20px 0;}
+/*article*/.news.inner .item > div, .statyi.inner .item > div, .video .item > div {float:left; width:80%;}
+/*article*/.news.inner .item span, .statyi.inner .item span, .video .item span {font-size:11px;}
+/*article*/.news.inner .item .rate, .statyi.inner .item .rate, .video .item .rate {margin:0 3% 20px 0; width:17% !important; text-align:center;}
+/*article*/.news.inner .item .viewed,
+/*article*/.news.inner .item .favorite,
+/*article*/.news.inner .item .comments,
+/*article*/.statyi.inner .item .viewed,
+/*article*/.statyi.inner .item .favorite,
+/*article*/.statyi.inner .item .comments,
+/*article*/.video .item .viewed,
+/*article*/.video .item .favorite,
+/*article*/.video .item .comments {line-height:19px;}
+/*article*/.news.inner .item .info a, .statyi.inner .item .info a, .video .item .info a {color:#6ea8b4;}
+/*article*/.news.inner .item, .statyi.inner .item, .video .item {border-bottom:#e9e9e9 1px solid;}
+/*article*/.news.inner.content img.intro, .statyi.inner.content img.intro {
+	width:41%; 
+	margin:0 3% 18px 0;
+	border-radius:5px; 
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	}
+.video.inner.content .intro {
+	width:94%; 
+	margin:20px 0;
+	border-radius:5px; 
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+.inner.content .cat {display:inline-block !important;}
+.inner.content .status {vertical-align: middle; margin-right: 5px;}
+.cat + .cat {margin-left:15px !important;}
+.artic-footer {font-size:11px; line-height:19px; border-top:1px solid #e9e9e9; padding:25px 0;}
+.artic-footer .info {margin:0 21px 0 0;}
+
+
+/* ------------------------------     Личный кабинет   ---------------------------------------- */
+
+article.user .profile .left, article.group .profile .left, article.partnerki .profile .left {width:30%;}
+article.user .profile .right, article.group .profile .right, article.partnerki .profile .right {width:70%;}
+article.user .profile .right h2, article.group .profile .right h2 {text-indent:0px; margin-top:0;}
+article.user .profile .right table tr td:first-child {padding:0 10px; font-weight:bold;}
+article.user .profile .right table tr:nth-child(odd) td:first-child {background: #e7eeef;}
+article.user .profile .right table tr td:last-child {width:100px;}
+article.user .profile .right table tr td:last-child a {display:none;}
+article.user .profile .right table tr:hover td:last-child a {display:block;}
+
+
+article.user .profile .left img.user-photo, article.group .profile .left img.group-photo {
+	width:180px;
+	border-radius: 4px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	}
+/*article.user .profile .left p, article.group .profile .left p {margin:8px 0;}*/
+article.partnerki .profile .left p {margin: 8px 8px 8px 0;}
+article.user .profile .left p span {color:#888888; padding:0 5px;}
+article.user .profile .left p span a {color:#888888;}
+article.user .profile .left p img.status {padding: 0px 3px; margin: -5px 0;}
+article.user .user-contacts > div {width:33%; display:inline-block;}
+article.user .user-contacts > div span {width:100%; display:block;}
+article.user .user-contacts h2 {
+	padding:0px 0 20px 0px; 
+	margin:35px 0 20px; 
+	background: url(../img/contacts-h.png) no-repeat 0px 7px;
+	border-bottom:1px solid #e9e9e9;
+}
+article.user .users-pp h2, article.user .users-groups h2 {
+	padding:0px 0 20px 0px; 
+	margin:35px 0 10px; 
+	border-bottom:1px solid #e9e9e9;
+}
+article.user .users-pp h2 {
+	background: url(../img/pp-ico.png) no-repeat 0px 5px;
+}
+article.user .users-groups h2 {
+	background: url(../img/group-users-ico.png) no-repeat 0px 5px;
+}
+article.group .group-users h2 {
+	background: url(../img/group-users-ico.png) no-repeat 0px 2px;
+	padding:0px 0 20px 0px; 
+	margin:35px 0 0; 
+	border-bottom:1px solid #e9e9e9;
+}
+article.group .group-users {border-bottom:1px solid #e9e9e9; padding:0 0 20px 0;}
+article.user .user-contacts span {padding:0 0 8px 20px;}
+article.user .user-contacts .vk {background: url(../img/user-social-vk.png) no-repeat;}
+article.user .user-contacts .fb {background: url(../img/user-social-fb.png) no-repeat;}
+article.user .user-contacts .gp {background: url(../img/user-social-gp.png) no-repeat;}
+article.user .user-contacts .icq {background: url(../img/user-social-icq.png) no-repeat;}
+article.user .user-contacts .jabber {background: url(../img/user-social-jabber.png) no-repeat;}
+article.user .user-contacts .skype {background: url(../img/user-social-skype.png) no-repeat;}
+article.user .user-contacts .mail {background: url(../img/user-social-mail.png) no-repeat;}
+article.user .user-contacts .forum {background: url(../img/user-social-forum.png) no-repeat;}
+article.user .user-contacts .web {background: url(../img/user-social-web.png) no-repeat;}
+
+.users-pp > a.item, .users-groups > a.item, .group-users > a.item {margin:20px 0 20px 3%; width:16.4%; display:inline-block; text-align: center;}
+.users-pp > a.item img, .users-groups > a.item img, .group-users > a.item img {border:0; width:50px; display:block; margin:8px auto;}
+
+
+article.group p.intro/*, article.partnerki p.intro*/ {margin:20px 0 16px 0 !important; font-weight:normal !important; width:94% !important;}
+article.partnerki p.intro {/*font-weight:normal !important;*/ width:94% !important;}
+.forum-link {background:url(../img/forum-ico2.png) no-repeat 0px 2px; padding:0px 0px 0px 22px;}
+
+article.partnerki .profile .right table {border-bottom:1px solid #e9e9e9; margin:0 0 20px 0;}
+article.partnerki .profile .right table td:first-child {padding: 0 0 0 10px;}
+
+article.partnerki .profile dl.tabs { margin:20px 0; height:33px;}
+article.partnerki .profile dl.tabs dt {width:140px !important; display:block; float:left;}
+article.partnerki .profile dl.tabs + div {margin: 20px 0 30px 0;}
+article.partnerki .profile .tabinner .news.inner .item {
+	background: #f8fafa; 
+	overflow: hidden; 
+	border-bottom:0px; 
+	margin:5px 0;
+	border-radius:4px; 
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	}
+article.partnerki .profile .tabinner .news.inner .item:nth-child(even) {background:#edf2f3;}
+article.partnerki .profile .tabinner .news.inner .info {width:auto !important;} 
+article.partnerki .profile .tabinner .news.inner .info a {color:#888;} 
+article.partnerki .profile .tabinner .news.inner img {width: 7.5%; margin: 20px 3% 20px 3%;} 
+article.partnerki .profile .tabinner .news.inner img + div {width:83.5%;} 
+
+
+article.partnerki.rates h3 {margin:30px 0;}
+article.partnerki.rates h3 a {text-decoration: none;}
+article.partnerki.rates h3 a:hover {text-decoration: underline;}
+/* ---------------------------  страница статьи      ------------------------------------------*/
+
+article.statyi .main-statyi a.item {
+	display:block;
+	margin:4px 0 0; 
+	width:100%; 
+	height:57px; 
+	line-height:57px; 
+	font-family: RobotoCondensed, Arial; 
+	font-weight: bold;
+	font-size: 24px;
+	text-decoration: none;
+	color:#222;
+	text-indent: 48px;
+	background-color: #f8fafa;
+	border:1px solid #fff;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	}
+article.statyi .main-statyi a.item:nth-child(even) {background-color: #edf2f3;}
+article.statyi .main-statyi a.item:hover {border:1px solid #6ea8b4;}
+
+.main-statyi a.item.cms {background: url(../img/cms-ico.png) no-repeat 20px 20px;}
+.main-statyi a.item.prog {background: url(../img/progr-ico.png) no-repeat 20px 20px;}
+.main-statyi a.item.partner {background: url(../img/partner-ico.png) no-repeat 20px 20px;}
+.main-statyi a.item.socseti {background: url(../img/socseti-ico.png) no-repeat 20px 20px;}
+.main-statyi a.item.domain {background: url(../img/domain-ico.png) no-repeat 20px 20px;}
+.main-statyi a.item.design {background: url(../img/design-ico.png) no-repeat 20px 20px;}
+.main-statyi a.item.soft {background: url(../img/soft-ico.png) no-repeat 20px 20px;}
+.main-statyi a.item.webdev {background: url(../img/webdev-ico.png) no-repeat 20px 20px;}
+.main-statyi a.item.srchengn {background: url(../img/srchengn-ico.png) no-repeat 20px 20px;}
+.main-statyi a.item.mobile {background: url(../img/mobile-ico.png) no-repeat 20px 20px;}
+.main-statyi a.item.other {background: url(../img/other-ico.png) no-repeat 20px 20px;}
+
+
+
+
+/* -----------------------------      обучение  -----------------------------------------------*/
+
+article.obuchenie.inner.content .intro.left {margin:0 3% 10px 0; width:19%; text-align:center; display:block;}
+article.obuchenie.inner.content .intro.left img {width:100%;}
+article.obuchenie.inner.content .intro.right {width:72% !important;}
+
+
+
+article.obuchenie .item {
+	background: #dbe9ec !important; 
+	overflow: hidden; 
+	padding:0 20px;
+	border-radius:5px; 
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	margin:5px 0 0;
+	border:1px solid #dbe9ec;
+}
+article.obuchenie .item div h4 + p{border-bottom:1px solid #d7d7d7; padding: 0 0 10px 0;}
+article.obuchenie .item:hover {border: 1px #6ea8b4 solid !important;}
+article.obuchenie .item h4 a {color:#222 !important; text-decoration: none;}
+article.obuchenie .item h4 a:hover {color:#6ea8b4 !important; text-decoration: none;}
+article.obuchenie .item.new {background: #edf2f3 !important; border:1px solid #edf2f3;}
+article.obuchenie .item a.preview {display:block; text-align:center;}
+article.obuchenie .item.favorite {background: #dbe9ec url(../img/favorite.png) no-repeat right 20px top 20px !important;}
+article.obuchenie .item.new.favorite {background: #edf2f3 url(../img/favorite.png) no-repeat right 20px top 20px !important;}
+article.obuchenie .item.video {background: #dbe9ec url(../img/video-ico.png) no-repeat right 10px top 10px !important;}
+article.obuchenie .item.new.video {background: #edf2f3 url(../img/video-ico.png) no-repeat right 10px top 10px !important;}
+.obuchenie .item a.preview {float:left; width:17%; margin:20px 3% 20px 0;}
+.obuchenie .item > div {float:left; width:100%;}
+.obuchenie .item span {font-size:11px;}
+.obuchenie .item .rate {margin:0 3% 20px 0; width:17% !important; text-align:center;}
+.obuchenie .item .viewed,
+.obuchenie .item .favorite,
+.obuchenie .item .comments {line-height:19px;}
+.obuchenie .item .info a {color:#6ea8b4;}
+.obuchenie .item {border-bottom:#e9e9e9 1px solid;}
+
+
+.obuchenie .stat-obuch {margin-bottom:40px; overflow: hidden;}
+.obuchenie .stat-obuch .item {width:80%; float:right;}
+.obuchenie .stat-obuch .status {width:11.5%; float:left; margin-right:2.5%; padding-top:95px; max-width:80px; text-align: center}
+.obuchenie .stat-obuch .status.one {background: url(../img/status1.png) no-repeat left 8px;}
+.obuchenie .stat-obuch .status.two {background: url(../img/status2.png) no-repeat left 8px;}
+.obuchenie .stat-obuch .status.three {background: url(../img/status3.png) no-repeat left 8px;}
+
+
+article.obuchenie .obuchenie-main .item {
+	float:left; 
+	width:26%; 
+	margin: 0 3% 20px 0; 
+	padding:20px 2.5%; 
+	text-align: center;
+	background: #edf2f3 !important;
+	border-color:#edf2f3 !important;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+article.obuchenie .obuchenie-main .item:nth-child(3n) {margin-right: 0 !important;}
+article.obuchenie .obuchenie-main .item .button {width:140px !important; margin:20px auto 0; clear:both;}
+article.obuchenie .obuchenie-main .item h2 {text-indent:0px !important;}
+article.obuchenie .obuchenie-main .item .statuses {border-top:1px solid #d5d9da; border-bottom:1px solid #d5d9da; text-align:left; width:80%; margin:0 auto; float:none !important;}
+article.obuchenie .obuchenie-main .item .statuses img {vertical-align: middle; margin:0 5px 0 0; width:18px;}
+article.obuchenie .obuchenie-main .item .statuses span {margin:0 0 0 5px; color:#888;}
+
+
+
+/*-------------------------------------      СОФТ    -----------------------------------------------*/ 
+
+article.soft .soft-main h2.h-free {clear:both; background:#cb4736 url(../img/h-free.png) no-repeat 20px 18px; color:#fff; height:57px; text-indent:50px !important; display:block; margin:20px 0; padding:0; line-height: 57px; border-radius:4px; -webkit-border-radius:4px; -moz-border-radius:4px;}
+article.soft .soft-main h2.h-pay {clear:both; background:#cb4736 url(../img/h-pay.png) no-repeat 20px 18px; color:#fff; height:57px; text-indent:50px !important; display:block; margin:20px 0; padding:0; line-height: 57px; border-radius:4px; -webkit-border-radius:4px; -moz-border-radius:4px;}
+article.soft .soft-main .item {
+	float:left; 
+	width:20.25%; 
+	margin: 0 2% 20px 0; 
+	padding:20px 1.5%; 
+	text-align: center;
+	background: #edf2f3;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border:1px solid #fff;
+}
+article.soft .soft-main .item.minus10 {background: #edf2f3 url(../img/minus10.png) no-repeat right top;}
+article.soft .soft-main .item.minus20 {background: #edf2f3 url(../img/minus20.png) no-repeat right top;}
+article.soft .soft-main .item.minus30 {background: #edf2f3 url(../img/minus30.png) no-repeat right top;}
+
+article.soft .soft-main .item:hover {border:1px solid #6ea8b4;}
+article.soft .soft-main .item:nth-child(4n) {margin-right: 0 !important;}
+
+article.soft .soft-main .item img {max-width:100%; text-align: center; vertical-align: middle; margin-bottom:20px;}
+article.soft .soft-main .item .price {background:#6ea8b4; text-align: center; font-family: RobotoCondensed; font-weight:bold; color:#fff; font-size:21px; margin:0 -7.5%; line-height: 45px;}
+article.soft .soft-main .item h4 {text-align: left;}
+article.soft .soft-main .item p {text-align: left; border-bottom: 1px solid #d5d9da; padding:0 0 20px 0;}
+article.soft .soft-main .item .button {width:100px !important; margin:20px auto 0;}
+
+article.soft.inner.content > .left a:first-child {display:block; width:100% !important;}
+article.soft.inner.content > .left a {display:block; width:24%; float:left; margin-right:1.33%;}
+article.soft.inner.content > .left a:nth-child(4n+1) {margin-right:0% !important;}
+article.soft.inner.content > .left a img {width:100%;}
+
+article.soft.inner.content > .right h2 {text-indent:0px !important;}
+article.soft.inner.content > .right h2 span {color:#cb4736; margin-left:5px;}
+
+article.soft.inner.content > .right table tr td {padding:5px 10px;}
+article.soft.inner.content > .right table tr td:first-child {background: #e7eeef;}
+article.soft.inner.content > .right table tr:nth-child(2n) td:first-child {background: #fff;}
+
+article.soft.inner.content > .right .forumico {background: url(../img/forum-ico2.png) no-repeat 0px 2px; text-indent:20px; margin:15px 0;}
+article.soft.inner.content > .right .targetico {background: url(../img/targetico.png) no-repeat 0px 2px; text-indent:20px; margin:15px 0;}
+
+article.soft.inner.content > .right hr ~ div {margin:10px 25px 0 0 !important;} 
+article.soft.inner.content > .right hr ~ a {margin:5px 0 !important;} 
+article.soft.inner.content > .right a.button {background-image: none !important; width: 110px !important; padding:0 !important;} 
+
+article.soft.inner.content h2.opisanieico {background:url(../img/opisanieico.png) no-repeat 0px 6px; border-bottom: 1px solid #e9e9e9;}
+
+
+/*-------------------------------------------  Словарь     ---------------------------------------------*/
+
+article.slovar h2 {border-bottom:1px solid #000;}
+article.slovar.inner.content h2 {text-align:left !important; border:none;}
+article.slovar.inner.content p.intro {width:94%;}
+article.slovar.inner.content .tags p {width:16%;}
+article.slovar.inner.content .tags p + div {width:82.5%;}
+article.slovar .searchbox {width:86% !important;}
+article.slovar .slovar-main {}
+article.slovar .slovar-main ul {
+	column-count: 4;
+	-webkit-column-count: 4;
+	-moz-column-count: 4;
+	-o-column-count: 4;
+	-ms-column-count: 4;
+	list-style-image: url(../img/foot-menu-list.png); 
+	margin:20px 0; 
+	padding:0; 
+	list-style-position: inside;
+}
+article.slovar .slovar-main ul li {
+	margin:0; 
+	padding:0; 
+	border-bottom:1px solid #e9e9e9; 
+	line-height: 33px;
+}
+
+article.slovar .slovar-main ul li a {text-decoration: none;}
+
+aside > .search {padding-top:0; padding-bottom: 0;}
+aside > .search .searchbox {width:75%;}
+aside > .search .searchbutton {width:15% !important; margin:20px 0;}
+
+aside > .slovar-list {height:510px; overflow-y:auto;}
+aside > .slovar-list ul {
+	margin:0; 
+	padding:0;
+	list-style-image: url(../img/foot-menu-list.png); 
+	padding:0; 
+	list-style-position: inside;
+}
+aside > .slovar-list ul li {
+	margin:0; 
+	padding:0; 
+	border-bottom:1px solid #e9e9e9; 
+	line-height: 33px;
+}
+aside > .slovar-list ul li a {text-decoration: none;}
+
+
+/*-----------OLD----------*/
+article.video .item.favorite {background: #dbe9ec url(../img/favorite.png) no-repeat right 20px top 20px !important;}
+article.video .item.new.favorite {background: #edf2f3 url(../img/favorite.png) no-repeat right 20px top 20px !important;}
+article.news.inner .item.favorite, article.statyi.inner .item.favorite {background: url(../img/favorite.png) no-repeat right 20px !important;}
+
+/* ------------------------------   страницы партнерок   ------------------------------------ */
+
+h2.reyting-partnerok {background:url(../img/reyting-partnerok.png) no-repeat 0 6px; text-indent:34px; border-bottom:none;}
+
+article.partnerki-old .partner-main .item {
+	float:left; 
+	width:26.33%; 
+	margin: 0 3% 20px 0; 
+	padding:20px 2.5%; 
+	text-align: center;
+	background: #edf2f3;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+article.partnerki-old .partner-main .item:nth-child(3n) {margin-right: 0 !important;}
+article.partnerki-old .partner-main .item .left { width:48%; margin-right:2%; margin-bottom: 15px; text-align: left;}
+article.partnerki-old .partner-main .item a.left {font-weight: bold; font-size: 14px; text-decoration: none; color:#6ea8b4;}
+article.partnerki-old .partner-main .item img {width:100%;}
+article.partnerki-old .partner-main .item p {text-align: left;}
+article.partnerki-old .partner-main .item p + p {border-bottom: 1px solid #d5d9da; padding: 0 0 20px}
+article.partnerki-old .partner-main .item .button {width:100px !important; margin:20px auto 0;}
+article.partnerki-old .partner-main .item p span {font-weight: bold;}
+
+

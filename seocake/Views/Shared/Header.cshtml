@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=950" />
+    <title>Партнерки</title>
+    @Styles.Render("~/Content/css")
+    
+    @Scripts.Render("~/bundles/jquery")
+    
+   
+    <script type="text/javascript">
+	$(document).ready(function() {
+
+	    $('#user-set').click(function(e){
+	      e.preventDefault();
+	      $('.user-set').toggle();
+	    });
+
+	    $('.tabs-cont .tab').hide();
+	    $('.tabs-cont .active').show();
+	    $('.tabs a').click(function(e){
+	      e.preventDefault();
+	      var tab = $(this).attr('href');
+	      $('.tabs a').removeClass('act');
+	      $('.tabs-cont .tab').hide();
+	      $(this).addClass('act');
+	      $(tab).show();
+	    });
+
+	});
+    </script>
+</head>
+<body>
+    <div class="top-head">
+        <div class="wrap">
+            <div class="logo-2 left">
+                <a href="#"><img src="@Url.Content("~/Content/img/logo-2.png")" /></a>
+            </div>
+            <div class="nav-2 left">
+                <ul>
+                    <li class="li1"><a href="#">Партнерки</a></li>
+                    <li class="current li2"><a href="#">Обучение</a></li>
+                    <li class="li3"><a href="#">Сообщество</a></li>
+                    <li class="li4"><a href="#">Новости</a></li>
+                    <li class="li5"><a href="#">Форум</a></li>
+                    <li class="li6"><a href="#">Словарь</a></li>
+                    <li class="li7"><a href="#">Софт</a></li>
+                </ul>
+            </div>
+            <div class="mes right">
+                <a class="user-mes" href="#"><img src="@Url.Content("~/Content/img/mes.png")">(2)></a>
+                <a id="user-set" href="#"><img src="@Url.Content("~/Content/img/mes-2.png")"></a>
+                
+                <div class="user-set" style="display:none;">
+                    <a href="#">Настройки 1</a>
+                    <a href="#">Настройки 2</a>
+                    <a href="#">Настройки 3</a>
+                    <a href="#">Настройки 4</a>
+                    <a href="#">Настройки 4</a>
+                </div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>

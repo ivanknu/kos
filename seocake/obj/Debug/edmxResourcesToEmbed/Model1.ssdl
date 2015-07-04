@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="seocakeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Partners">
+    <Key>
+      <PropertyRef Name="PartnerId" />
+    </Key>
+    <Property Name="PartnerId" Type="int" Nullable="false" />
+    <Property Name="Description" Type="text" />
+    <Property Name="ReferalHref" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Posts">
+    <Key>
+      <PropertyRef Name="PostsId" />
+    </Key>
+    <Property Name="PostsId" Type="int" Nullable="false" />
+    <Property Name="Post" Type="text" />
+    <Property Name="PostName" Type="nchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Soft">
+    <Key>
+      <PropertyRef Name="SoftId" />
+    </Key>
+    <Property Name="SoftId" Type="int" Nullable="false" />
+    <Property Name="Description" Type="text" />
+    <Property Name="HrefSoft" Type="nchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Statistics">
+    <Key>
+      <PropertyRef Name="StatisticsId" />
+    </Key>
+    <Property Name="StatisticsId" Type="int" Nullable="false" />
+    <Property Name="WebmasterName" Type="nchar" MaxLength="255" />
+    <Property Name="Money" Type="int" />
+    <Property Name="PartnersId" Type="int" />
+    <Property Name="Date" Type="date" />
+  </EntityType>
+  <EntityType Name="Vocabluary">
+    <Key>
+      <PropertyRef Name="VocabluaryId" />
+    </Key>
+    <Property Name="VocabluaryId" Type="int" Nullable="false" />
+    <Property Name="Word" Type="nchar" MaxLength="255" />
+    <Property Name="Description" Type="text" />
+  </EntityType>
+  <EntityContainer Name="seocakeModelStoreContainer">
+    <EntitySet Name="Partners" EntityType="Self.Partners" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Posts" EntityType="Self.Posts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Soft" EntityType="Self.Soft" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Statistics" EntityType="Self.Statistics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vocabluary" EntityType="Self.Vocabluary" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

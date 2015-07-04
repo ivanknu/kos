@@ -1,0 +1,241 @@
+﻿@{
+    ViewBag.Title = "Posts";
+}
+
+@Html.Partial("Header")
+
+
+<div class="wrap">
+
+    <div id="center">
+        <section><h1>Название категории статей<a href="#" class="rss">Rss</a></section></h1> <!-- Заголовок раздела -->
+        <div class="search-old inner">
+            <input class="searchbox" type="text" size="50" placeholder="Поиск: введите слово либо автора">
+            <input class="submit button red searchbutton right" type="submit" value="Найти">
+        </div>
+        <div class="orderby-bar">
+            <a href="#" class="favorite">В закладках</a>
+            <div class="orderby-date">
+                <span>Выводить:</span>
+                <select class="select">
+                    <option>За сутки</option>
+                    <option>За месяц</option>
+                    <option>За год</option>
+                </select>
+            </div>
+            <div class="orderby">
+                <span>Сортировать по:</span>
+                <a href="#">Оценкам</a>
+                <a href="#">Просмотрам</a>
+                <a href="#">Закладкам</a>
+            </div>
+        </div>
+        <aside class="old-as">
+            <div class="navigator">
+                <h2>Навигатор</h2>
+                <select class="select">
+                    <option>Вариант 1</option>
+                    <option>Вариант 2</option>
+                    <option>Вариант 3</option>
+                    <option>Вариант 4</option>
+                </select>
+                <select class="select">
+                    <option>Вариант 1</option>
+                    <option>Вариант 2</option>
+                    <option>Вариант 3</option>
+                    <option>Вариант 4</option>
+                </select>
+                <input class="submit button red searchbutton" type="submit" value="Найти">
+            </div>
+            <div class="banner">
+                <a href="#"><img src="@Url.Content("~/Content/img/statyi-help-banner.png")" />></a>
+            </div>
+            
+            <div class="other-statyi">
+                <h2>Лучшие статьи за 24 часа</h2>
+                <div class="item">
+                    <p><a href="#">Люди с кодопрошлым или закат программистов</a></p>
+                </div>
+                <div class="item">
+                    <p><a href="#">Люди с кодопрошлым или закат программистов</a></p>
+                </div>
+                <div class="item">
+                    <p><a href="#">Люди с кодопрошлым или закат программистов</a></p>
+                </div>
+                <div class="item">
+                    <p><a href="#">Люди с кодопрошлым или закат программистов</a></p>
+                </div>
+                <div class="item">
+                    <p><a href="#">Люди с кодопрошлым или закат программистов</a></p>
+                </div>
+                <div class="item">
+                    <p><a href="#">Люди с кодопрошлым или закат программистов</a></p>
+                </div>
+            </div>
+
+        </aside>
+        <article class="statyi inner">
+            <!-- Страница Статьи, вложенная -->
+            <div class="item favorite">
+                <img src="@Url.Content("~/Content/img/news4.png")" />
+                ><div>
+                    <h4><a href="#">Конференция SMM.ua</a></h4>
+                    <span class="cat">Категория: <a href="#">SEO</a></span>
+                    <p>Программное обеспечение меняет стандарты обработки цифровых изображений, предлагая мощные инструменты для работы с фотографиями и обеспечивая обработки цифровых изображений, предлагая мощные инструменты.</p>
+                </div>
+                <div class="clear"></div>
+                <div class="rate left">
+                    <span class="plus">25</span>
+                    <span class="minus">14</span>
+                </div>
+                <span class="viewed left">(3456)</span>
+                <span class="comments left">(12)</span>
+                <span class="favorite left">(25)</span>
+                <span class="info right"><a href="#">Сергей Бринн</a>, 1 сен 2013, 11:24</span>
+            </div>
+            <div class="item">
+                <img src="@Url.Content("~/Content/img/news4.png")" />
+                ><div>
+                    <h4><a href="#">Конференция SMM.ua</a></h4>
+                    <span class="cat">Категория: <a href="#">SEO</a></span>
+                    <p>Программное обеспечение меняет стандарты обработки цифровых изображений, предлагая мощные инструменты для работы с фотографиями и обеспечивая обработки цифровых изображений, предлагая мощные инструменты.</p>
+                </div>
+                <div class="clear"></div>
+                <div class="rate left">
+                    <span class="plus">25</span>
+                    <span class="minus">14</span>
+                </div>
+                <span class="viewed left">(3456)</span>
+                <span class="comments left">(12)</span>
+                <span class="favorite left">(25)</span>
+                <span class="info right"><a href="#">Сергей Бринн</a>, 1 сен 2013, 11:24</span>
+            </div>
+            <div class="item favorite">
+                <img src="@Url.Content("~/Content/img/news4.png")" />
+                
+                <div>
+                    <h4><a href="#">Конференция SMM.ua</a></h4>
+                    <span class="cat">Категория: <a href="#">SEO</a></span>
+                    <p>Программное обеспечение меняет стандарты обработки цифровых изображений, предлагая мощные инструменты для работы с фотографиями и обеспечивая обработки цифровых изображений, предлагая мощные инструменты.</p>
+                </div>
+                <div class="clear"></div>
+                <div class="rate left">
+                    <span class="plus">25</span>
+                    <span class="minus">14</span>
+                </div>
+                <span class="viewed left">(3456)</span>
+                <span class="comments left">(12)</span>
+                <span class="favorite left">(25)</span>
+                <span class="info right"><a href="#">Сергей Бринн</a>, 1 сен 2013, 11:24</span>
+            </div>
+            <div class="item">
+                <img src="@Url.Content("~/Content/img/news4.png")" />
+                ><div>
+                    <h4><a href="#">Конференция SMM.ua</a></h4>
+                    <span class="cat">Категория: <a href="#">SEO</a></span>
+                    <p>Программное обеспечение меняет стандарты обработки цифровых изображений, предлагая мощные инструменты для работы с фотографиями и обеспечивая обработки цифровых изображений, предлагая мощные инструменты.</p>
+                </div>
+                <div class="clear"></div>
+                <div class="rate left">
+                    <span class="plus">25</span>
+                    <span class="minus">14</span>
+                </div>
+                <span class="viewed left">(3456)</span>
+                <span class="comments left">(12)</span>
+                <span class="favorite left">(25)</span>
+                <span class="info right"><a href="#">Сергей Бринн</a>, 1 сен 2013, 11:24</span>
+            </div>
+            <div class="item">
+                <img src="@Url.Content("~/Content/img/news4.png")" />
+                ><div>
+                    <h4><a href="#">Конференция SMM.ua</a></h4>
+                    <span class="cat">Категория: <a href="#">SEO</a></span>
+                    <p>Программное обеспечение меняет стандарты обработки цифровых изображений, предлагая мощные инструменты для работы с фотографиями и обеспечивая обработки цифровых изображений, предлагая мощные инструменты.</p>
+                </div>
+                <div class="clear"></div>
+                <div class="rate left">
+                    <span class="plus">25</span>
+                    <span class="minus">14</span>
+                </div>
+                <span class="viewed left">(3456)</span>
+                <span class="comments left">(12)</span>
+                <span class="favorite left">(25)</span>
+                <span class="info right"><a href="#">Сергей Бринн</a>, 1 сен 2013, 11:24</span>
+            </div>
+            <div class="item favorite">
+                <img src="@Url.Content("~/Content/img/news4.png")" />
+                ><div>
+                    <h4><a href="#">Конференция SMM.ua</a></h4>
+                    <span class="cat">Категория: <a href="#">SEO</a></span>
+                    <p>Программное обеспечение меняет стандарты обработки цифровых изображений, предлагая мощные инструменты для работы с фотографиями и обеспечивая обработки цифровых изображений, предлагая мощные инструменты.</p>
+                </div>
+                <div class="clear"></div>
+                <div class="rate left">
+                    <span class="plus">25</span>
+                    <span class="minus">14</span>
+                </div>
+                <span class="viewed left">(3456)</span>
+                <span class="comments left">(12)</span>
+                <span class="favorite left">(25)</span>
+                <span class="info right"><a href="#">Сергей Бринн</a>, 1 сен 2013, 11:24</span>
+            </div>
+            <div class="item">
+                <img src="@Url.Content("~/Content/img/news4.png")" />
+                ><div>
+                    <h4><a href="#">Конференция SMM.ua</a></h4>
+                    <span class="cat">Категория: <a href="#">SEO</a></span>
+                    <p>Программное обеспечение меняет стандарты обработки цифровых изображений, предлагая мощные инструменты для работы с фотографиями и обеспечивая обработки цифровых изображений, предлагая мощные инструменты.</p>
+                </div>
+                <div class="clear"></div>
+                <div class="rate left">
+                    <span class="plus">25</span>
+                    <span class="minus">14</span>
+                </div>
+                <span class="viewed left">(3456)</span>
+                <span class="comments left">(12)</span>
+                <span class="favorite left">(25)</span>
+                <span class="info right"><a href="#">Сергей Бринн</a>, 1 сен 2013, 11:24</span>
+            </div>
+            <div class="item">
+                <img src="@Url.Content("~/Content/img/news4.png")" />
+                ><div>
+                    <h4><a href="#">Конференция SMM.ua</a></h4>
+                    <span class="cat">Категория: <a href="#">SEO</a></span>
+                    <p>Программное обеспечение меняет стандарты обработки цифровых изображений, предлагая мощные инструменты для работы с фотографиями и обеспечивая обработки цифровых изображений, предлагая мощные инструменты.</p>
+                </div>
+                <div class="clear"></div>
+                <div class="rate left">
+                    <span class="plus">25</span>
+                    <span class="minus">14</span>
+                </div>
+                <span class="viewed left">(3456)</span>
+                <span class="comments left">(12)</span>
+                <span class="favorite left">(25)</span>
+                <span class="info right"><a href="#">Сергей Бринн</a>, 1 сен 2013, 11:24</span>
+            </div>
+
+            <div class="pagination">
+                <ul>
+                    <li class="back"><a href="#">Назад</a></li>
+                    <li><a href="#">1</a></li>
+                    <li class="current"><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li class="other"><a href="#">...</a></li>
+                    <li class="last"><a href="#">245</a></li>
+                    <li class="forward"><a href="#">Вперед</a></li>
+                </ul>
+            </div>
+
+        </article>
+        <div class="clear"></div>
+    </div>
+
+
+</div>
+
+
+@Html.Partial("Footer")

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="seocakeModelStoreContainer" CdmEntityContainer="seocakeEntities">
+    <EntitySetMapping Name="Partners">
+      <EntityTypeMapping TypeName="seocakeModel.Partner">
+        <MappingFragment StoreEntitySet="Partners">
+          <ScalarProperty Name="PartnerId" ColumnName="PartnerId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ReferalHref" ColumnName="ReferalHref" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Posts">
+      <EntityTypeMapping TypeName="seocakeModel.Post">
+        <MappingFragment StoreEntitySet="Posts">
+          <ScalarProperty Name="PostsId" ColumnName="PostsId" />
+          <ScalarProperty Name="Post1" ColumnName="Post" />
+          <ScalarProperty Name="PostName" ColumnName="PostName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Softs">
+      <EntityTypeMapping TypeName="seocakeModel.Soft">
+        <MappingFragment StoreEntitySet="Soft">
+          <ScalarProperty Name="SoftId" ColumnName="SoftId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="HrefSoft" ColumnName="HrefSoft" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Statistics">
+      <EntityTypeMapping TypeName="seocakeModel.Statistic">
+        <MappingFragment StoreEntitySet="Statistics">
+          <ScalarProperty Name="StatisticsId" ColumnName="StatisticsId" />
+          <ScalarProperty Name="WebmasterName" ColumnName="WebmasterName" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="PartnersId" ColumnName="PartnersId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vocabluaries">
+      <EntityTypeMapping TypeName="seocakeModel.Vocabluary">
+        <MappingFragment StoreEntitySet="Vocabluary">
+          <ScalarProperty Name="VocabluaryId" ColumnName="VocabluaryId" />
+          <ScalarProperty Name="Word" ColumnName="Word" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
