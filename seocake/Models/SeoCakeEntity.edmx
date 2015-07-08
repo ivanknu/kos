@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="seocakeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="seocakeModelStoreContainer">
+          <EntitySet Name="Partners" EntityType="seocakeModel.Store.Partners" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Posts" EntityType="seocakeModel.Store.Posts" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Soft" EntityType="seocakeModel.Store.Soft" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Statistics" EntityType="seocakeModel.Store.Statistics" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Vocabluary" EntityType="seocakeModel.Store.Vocabluary" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Partners">
+          <Key>
+            <PropertyRef Name="PartnerId" />
+          </Key>
+          <Property Name="PartnerId" Type="int" Nullable="false" />
+          <Property Name="Description" Type="text" />
+          <Property Name="ReferalHref" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Posts">
+          <Key>
+            <PropertyRef Name="PostsId" />
+          </Key>
+          <Property Name="PostsId" Type="int" Nullable="false" />
+          <Property Name="Post" Type="text" />
+          <Property Name="PostName" Type="nchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Soft">
+          <Key>
+            <PropertyRef Name="SoftId" />
+          </Key>
+          <Property Name="SoftId" Type="int" Nullable="false" />
+          <Property Name="Description" Type="text" />
+          <Property Name="HrefSoft" Type="nchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Statistics">
+          <Key>
+            <PropertyRef Name="StatisticsId" />
+          </Key>
+          <Property Name="StatisticsId" Type="int" Nullable="false" />
+          <Property Name="WebmasterName" Type="nchar" MaxLength="255" />
+          <Property Name="Money" Type="int" />
+          <Property Name="PartnersId" Type="int" />
+          <Property Name="Date" Type="date" />
+        </EntityType>
+        <EntityType Name="Vocabluary">
+          <Key>
+            <PropertyRef Name="VocabluaryId" />
+          </Key>
+          <Property Name="VocabluaryId" Type="int" Nullable="false" />
+          <Property Name="Word" Type="nchar" MaxLength="255" />
+          <Property Name="Description" Type="text" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="seocakeModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="seocakeConnectionString" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Partners" EntityType="seocakeModel.Partner" />
+          <EntitySet Name="Posts" EntityType="seocakeModel.Post" />
+          <EntitySet Name="Softs" EntityType="seocakeModel.Soft" />
+          <EntitySet Name="Statistics" EntityType="seocakeModel.Statistic" />
+          <EntitySet Name="Vocabluaries" EntityType="seocakeModel.Vocabluary" />
+        </EntityContainer>
+        <EntityType Name="Partner">
+          <Key>
+            <PropertyRef Name="PartnerId" />
+          </Key>
+          <Property Name="PartnerId" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="ReferalHref" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="Post">
+          <Key>
+            <PropertyRef Name="PostsId" />
+          </Key>
+          <Property Name="PostsId" Type="Int32" Nullable="false" />
+          <Property Name="Post1" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="PostName" Type="String" MaxLength="255" Unicode="true" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="Soft">
+          <Key>
+            <PropertyRef Name="SoftId" />
+          </Key>
+          <Property Name="SoftId" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="HrefSoft" Type="String" MaxLength="255" Unicode="true" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="Statistic">
+          <Key>
+            <PropertyRef Name="StatisticsId" />
+          </Key>
+          <Property Name="StatisticsId" Type="Int32" Nullable="false" />
+          <Property Name="WebmasterName" Type="String" MaxLength="255" Unicode="true" FixedLength="true" />
+          <Property Name="Money" Type="Int32" />
+          <Property Name="PartnersId" Type="Int32" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Vocabluary">
+          <Key>
+            <PropertyRef Name="VocabluaryId" />
+          </Key>
+          <Property Name="VocabluaryId" Type="Int32" Nullable="false" />
+          <Property Name="Word" Type="String" MaxLength="255" Unicode="true" FixedLength="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="seocakeModelStoreContainer" CdmEntityContainer="seocakeConnectionString">
+          <EntitySetMapping Name="Partners">
+            <EntityTypeMapping TypeName="seocakeModel.Partner">
+              <MappingFragment StoreEntitySet="Partners">
+                <ScalarProperty Name="PartnerId" ColumnName="PartnerId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ReferalHref" ColumnName="ReferalHref" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Posts">
+            <EntityTypeMapping TypeName="seocakeModel.Post">
+              <MappingFragment StoreEntitySet="Posts">
+                <ScalarProperty Name="PostsId" ColumnName="PostsId" />
+                <ScalarProperty Name="Post1" ColumnName="Post" />
+                <ScalarProperty Name="PostName" ColumnName="PostName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Softs">
+            <EntityTypeMapping TypeName="seocakeModel.Soft">
+              <MappingFragment StoreEntitySet="Soft">
+                <ScalarProperty Name="SoftId" ColumnName="SoftId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="HrefSoft" ColumnName="HrefSoft" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Statistics">
+            <EntityTypeMapping TypeName="seocakeModel.Statistic">
+              <MappingFragment StoreEntitySet="Statistics">
+                <ScalarProperty Name="StatisticsId" ColumnName="StatisticsId" />
+                <ScalarProperty Name="WebmasterName" ColumnName="WebmasterName" />
+                <ScalarProperty Name="Money" ColumnName="Money" />
+                <ScalarProperty Name="PartnersId" ColumnName="PartnersId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vocabluaries">
+            <EntityTypeMapping TypeName="seocakeModel.Vocabluary">
+              <MappingFragment StoreEntitySet="Vocabluary">
+                <ScalarProperty Name="VocabluaryId" ColumnName="VocabluaryId" />
+                <ScalarProperty Name="Word" ColumnName="Word" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
