@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "seocake", "seocake\seocake.csproj", "{D445897F-012E-4627-AB0E-B19D13360B42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adminPanel", "adminPanel\adminPanel.csproj", "{F2A1B1BB-955D-436C-A3B1-C39D7980A745}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +15,10 @@ Global
 		{D445897F-012E-4627-AB0E-B19D13360B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D445897F-012E-4627-AB0E-B19D13360B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D445897F-012E-4627-AB0E-B19D13360B42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2A1B1BB-955D-436C-A3B1-C39D7980A745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2A1B1BB-955D-436C-A3B1-C39D7980A745}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2A1B1BB-955D-436C-A3B1-C39D7980A745}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2A1B1BB-955D-436C-A3B1-C39D7980A745}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
