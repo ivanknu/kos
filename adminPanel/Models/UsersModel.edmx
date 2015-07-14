@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="seocakeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="seocakeModelStoreContainer">
+          <EntitySet Name="Access" EntityType="seocakeModel.Store.Access" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="seocakeModel.Store.Users" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Users_ToTable" Association="seocakeModel.Store.FK_Users_ToTable">
+            <End Role="Access" EntitySet="Access" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Access">
+          <Key>
+            <PropertyRef Name="AccessId" />
+          </Key>
+          <Property Name="AccessId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AccessDesc" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="UserPassword" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="UserGUID" Type="varchar(max)" Nullable="false" />
+          <Property Name="UserAccessId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Users_ToTable">
+          <End Role="Access" Type="seocakeModel.Store.Access" Multiplicity="1" />
+          <End Role="Users" Type="seocakeModel.Store.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Access">
+              <PropertyRef Name="AccessId" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="UserAccessId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="seocakeModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="seocakeEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Accesses" EntityType="seocakeModel.Access" />
+          <EntitySet Name="Users" EntityType="seocakeModel.User" />
+          <AssociationSet Name="FK_Users_ToTable" Association="seocakeModel.FK_Users_ToTable">
+            <End Role="Access" EntitySet="Accesses" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Access">
+          <Key>
+            <PropertyRef Name="AccessId" />
+          </Key>
+          <Property Name="AccessId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="AccessDesc" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Users" Relationship="seocakeModel.FK_Users_ToTable" FromRole="Access" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UserPassword" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UserGUID" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="UserAccessId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Access" Relationship="seocakeModel.FK_Users_ToTable" FromRole="Users" ToRole="Access" />
+        </EntityType>
+        <Association Name="FK_Users_ToTable">
+          <End Role="Access" Type="seocakeModel.Access" Multiplicity="1" />
+          <End Role="Users" Type="seocakeModel.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Access">
+              <PropertyRef Name="AccessId" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="UserAccessId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="seocakeModelStoreContainer" CdmEntityContainer="seocakeEntities">
+          <EntitySetMapping Name="Accesses">
+            <EntityTypeMapping TypeName="seocakeModel.Access">
+              <MappingFragment StoreEntitySet="Access">
+                <ScalarProperty Name="AccessId" ColumnName="AccessId" />
+                <ScalarProperty Name="AccessDesc" ColumnName="AccessDesc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="seocakeModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+                <ScalarProperty Name="UserGUID" ColumnName="UserGUID" />
+                <ScalarProperty Name="UserAccessId" ColumnName="UserAccessId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
